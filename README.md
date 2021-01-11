@@ -1,4 +1,5 @@
 # jigsolver
+Simple prototype for locating likely locations of a puzzle piece. Uses tensorflow.js and a Coco SSD model for object detection.
 
 ## Project setup
 ```
@@ -9,16 +10,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
