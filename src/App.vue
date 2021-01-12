@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-
     <div class="model__container">
       <div class="img__container">
         <img id="sample-img__img" src="./assets/sample_kite.jpg"/>
@@ -12,10 +10,8 @@
     
     <div class="model__container">
       <div class="img__container">
-        <!-- Replace this with your image. Make sure CORS settings allow reading the image! -->
         <img id="full-img__img" src="./assets/full_image.jpg"/>
         <canvas id="full-img__canvas"></canvas>
-        <!-- <div id="full-img__canvas"></div> -->
       </div>
       <button type="button" v-on:click="runModel('full-img__img', 'full-img__canvas', false)" style="width: 80px">Run full</button>
     </div>
@@ -30,7 +26,7 @@
 <script>
 import P5 from 'p5';
 
-// Notice there is no 'import' statement. 'cocoSsd' and 'tf' is
+// Notice there is no 'import' statement for tensorflow or coco-ssd. 'cocoSsd' and 'tf' is
 // available on the index-page because of the script tag above.
 
 export default {
@@ -40,31 +36,7 @@ export default {
       sampleClass: ''
     }
   },
-  mounted() {
-    // const sketch = s => {
-    //     let w = fullImg.clientWidth;
-    //     let h = fullImg.clientHeight;
-
-    //     s.setup = () => {
-    //         s.createCanvas(w, h);
-    //     };
-
-    //     s.draw = () => {
-    //         s.background(33, 33, 33);
-    //         s.ellipse(50, 50, 100, 100);
-
-    //         // call your method:
-    //         // s.yourMethod(x, y);
-    //     };
-
-    //     // create methods:
-    //     // s.yourMethod = (x, y) => {
-    //     //     // your method
-    //     // }
-    // }
-
-    // let canvas = new P5(sketch, 'full-img__canvas');
-  },
+  mounted() {},
   methods: {
     async analyzeSample() {
       const vm = this;
